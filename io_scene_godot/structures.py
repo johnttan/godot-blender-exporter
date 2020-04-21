@@ -53,7 +53,7 @@ class ESCNFile:
             raise Exception("Attempting to add object to file twice")
 
         self.external_resources.append(item)
-        index = len(self.external_resources)
+        index = len(self.external_resources) - 1
         item.heading['id'] = index
         self._external_hashes[hashable] = index
         return index
